@@ -1,0 +1,24 @@
+PS C:\Users\jkier\OneDrive\Pulpit\app-python\app-python> python -u "c:\Users\jkier\OneDrive\Pulpit\app-python\app-python\backend\app\main.py"
+
+
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="localhost", port=8080)
+
+
+
+npm start
+
+set KUBECONFIG=C:\Users\jkier\Downloads\civo-web-ai-kubeconfig
+
+kubectl get svc
+kubectl get pod
+kubectl get ingress
+
+kubectl apply -f wayde-ai-ingress.yaml
+
+kubectl rollout restart deployment frontend-deployment
+
+kubectl rollout restart deployment backend-deployment

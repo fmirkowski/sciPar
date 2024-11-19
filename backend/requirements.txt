@@ -1,0 +1,55 @@
+fastapi==0.88.0
+uvicorn==0.22.0
+pydantic==1.10.2
+python-multipart==0.0.6  # Obsługa przesyłania plików formularzy
+aiofiles==23.1.0        # Opcjonalne dla manipulacji plikami asynchronicznie
+aiohappyeyeballs==2.4.3
+aiohttp==3.11.2
+aiosignal==1.3.1
+annotated-types==0.7.0
+anyio==4.6.2.post1
+attrs==24.2.0
+certifi==2024.8.30
+charset-normalizer==3.4.0
+distro==1.9.0
+filelock==3.16.1
+frozenlist==1.5.0
+fsspec==2024.10.0
+h11==0.14.0
+httpcore==1.0.7
+httpx==0.27.2
+huggingface-hub==0.26.2
+idna==3.10
+Jinja2==3.1.4
+jiter==0.7.1
+joblib==1.4.2
+MarkupSafe==3.0.2
+mpmath==1.3.0
+multidict==6.1.0
+networkx==2.8.8
+numpy==1.24.4  # Najnowsza kompatybilna wersja dla większości bibliotek
+openai>=1.0.0
+packaging==24.2
+pillow==9.3.0  # Zmieniona wersja na istniejącą
+propcache==0.2.0
+pydantic_core==2.23.4
+python-dotenv==1.0.1
+PyYAML==6.0.2
+regex==2024.11.6
+requests==2.32.3
+safetensors==0.4.5
+scikit-learn==1.2.2  # Poprawiona istniejąca wersja
+scipy==1.10.1  # Poprawiona istniejąca wersja
+sentence-transformers==3.3.0
+setuptools==75.5.0
+sniffio==1.3.1
+starlette==0.22.0
+sympy==1.13.1
+threadpoolctl==3.5.0
+tokenizers==0.20.3
+torch==2.0.1  # Zmieniona wersja na stabilną wersję (dopasuj w razie potrzeby)
+tqdm==4.67.0
+transformers==4.46.2
+typing_extensions==4.12.2
+urllib3==2.2.3
+yarl==1.17.1

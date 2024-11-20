@@ -51,16 +51,7 @@ Create a `.env` file in the backend directory with:
 OPENAI_API_KEY=your_openai_api_key to be able to use the OpenAI API and features we implemented.
 
 
-## Deployment Status
 
-⚠️ **Note:** The Kubernetes deployment configuration is currently in progress but incomplete. The following components were planned but not fully implemented:
-
-- Load balancer configuration
-- SSL/TLS setup
-- Production environment variables
-- Continuous deployment pipeline
-
-The deployment files can be found in the `k8s/` directory, but they require additional configuration and testing before production use.
 
 ## Contributing
 

@@ -18,7 +18,7 @@ app = FastAPI()
 # CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -39,37 +39,30 @@ class QueryResponse(BaseModel):
 
 def get_papers_from_db(limit: int = 10) -> List[dict]:
     try:
-        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        db_path = os.path.join(BASE_DIR, 'arxiv_papers_q-fin.db')
-        
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            SELECT arxiv_id, title, author, coauthors, abstract 
-            FROM papers 
-            LIMIT 15
-        """)
-        
-        papers = []
-        for row in cursor.fetchall():
-            papers.append({
-                "id": row[0],
-                "title": row[1],
-                "author": row[2],
-                "coauthors": row[3].split(", ") if row[3] else [],
-                "abstract": row[4]
-            })
-        
-        conn.close()
-        return papers
+        with open('app/papers.json', 'r') as f:
+            data = json.load(f)
+            return data['papers'][:limit]
     except Exception as e:
-        print(f"Database error: {str(e)}")
+        print(f"Error loading mock papers: {e}")
         return []
 
 @app.post("/api/match-papers", response_model=QueryResponse)
 async def match_papers(request: QueryRequest):
     try:
+        # Add debug logging
+        print(f"Received request: {request}")
+        
+        # Check if OpenAI API key is set
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            print("OpenAI API key not found in environment variables")
+            raise HTTPException(
+                status_code=500,
+                detail="OpenAI API key not configured"
+            )
+
+        client = OpenAI(api_key=api_key)
+        
         # Get papers from database
         db_papers = get_papers_from_db(limit=10)
         if not db_papers:
@@ -85,8 +78,6 @@ async def match_papers(request: QueryRequest):
             for paper in db_papers
         ])
 
-        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        
         prompt = f"""Given this user query and list of available papers, select the most relevant ones:
 
         User Query: {request.natural_language}
@@ -112,7 +103,7 @@ async def match_papers(request: QueryRequest):
             None,
             partial(
                 client.chat.completions.create,
-                model="gpt-4o-mini",
+                model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "You are an API that returns only valid JSON arrays of paper information, using only papers from the provided list."},
                     {"role": "user", "content": prompt}
@@ -141,7 +132,10 @@ async def match_papers(request: QueryRequest):
         print(f"Raw content: {content}")
         raise HTTPException(status_code=500, detail="Failed to parse paper data")
     except Exception as e:
-        print(f"Error: {str(e)}")
+        # Enhanced error logging
+        print(f"Error details: {str(e)}")
+        import traceback
+        print(f"Traceback: {traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/health")

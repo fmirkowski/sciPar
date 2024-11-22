@@ -38,13 +38,27 @@ class QueryResponse(BaseModel):
     papers: List[PaperResponse]
 
 def get_papers_from_db(limit: int = 10) -> List[dict]:
+    file_path = os.path.join(os.path.dirname(__file__), 'papers.json')
+    if not os.path.exists(file_path):
+        raise HTTPException(
+            status_code=500,
+            detail=f"Papers database not found at {file_path}"
+        )
+    
     try:
-        with open('app/papers.json', 'r') as f:
+        with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
             return data['papers'][:limit]
+    except UnicodeDecodeError as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Encoding error in papers.json. Please ensure the file is saved with UTF-8 encoding: {str(e)}"
+        )
     except Exception as e:
-        print(f"Error loading mock papers: {e}")
-        return []
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error loading papers: {str(e)}"
+        )
 
 @app.post("/api/match-papers", response_model=QueryResponse)
 async def match_papers(request: QueryRequest):
@@ -96,7 +110,7 @@ async def match_papers(request: QueryRequest):
             }}
         ]
 
-        Only include papers from the provided list that are somewhat relevant to the user query, try to provide a few, never provide nothing, always change the title and abstract to be more business friendly. Write like you would be directly talking to the user. Do not create fictional papers."""
+        Only include papers from the provided list that are somewhat relevant to the user query, always try to provide at least 4 papers, never provide nothing, always change the title and abstract to be more business friendly and literally so simple that a 15 year old could understand it. Write like you would be directly talking to the user. Do not create fictional papers."""
 
         loop = asyncio.get_event_loop()
         response = await loop.run_in_executor(

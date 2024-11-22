@@ -77,11 +77,6 @@ class PaperScraper:
             
             title = entry.find('.//atom:title', ns).text.strip()
             abstract = entry.find('.//atom:summary', ns).text.strip()
-            published = entry.find('.//atom:published', ns).text
-            
-            # Format the date to be more readable
-            date_obj = datetime.strptime(published, "%Y-%m-%dT%H:%M:%SZ")
-            formatted_date = date_obj.strftime("%B %d, %Y")  # e.g., "November 21, 2024"
             
             authors = entry.findall('.//atom:author', ns)
             main_author = authors[0].find('atom:name', ns).text if authors else "Unknown"
@@ -91,12 +86,11 @@ class PaperScraper:
             arxiv_id = id_url.split('/')[-1]
             
             return {
-                'paper_id': arxiv_id,
+                'id': arxiv_id,
                 'title': title,
-                'main_author': main_author,
+                'author': main_author,
                 'coauthors': coauthors,
-                'abstract': abstract,
-                'published_date': formatted_date
+                'abstract': abstract
             }
             
         except Exception as e:

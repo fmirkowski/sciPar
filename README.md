@@ -1,5 +1,8 @@
 # Research Paper Discovery Platform
 
+# Start Here!
+[Visit SciPar](https://scipar.vercel.app)
+
 A platform designed to bridge the gap between academic research and business innovation. This application helps business professionals and industry experts discover relevant research papers and connect directly with researchers.
 
 ## Features
@@ -51,7 +54,8 @@ Create a `.env` file in the backend directory with:
 OPENAI_API_KEY=your_openai_api_key to be able to use the OpenAI API and features we implemented.
 
 
-
+### When running locally
+Change the API_BASE_URL in the frontend/src/services/paperApi.ts file to http://localhost:8080
 
 ## Contributing
 

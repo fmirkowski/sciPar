@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { PaperDetailProps } from '../types';
-import { Mail, Calendar, Globe, Twitter, Linkedin, Download, MessageSquare, Video, Eye } from 'lucide-react';
+import { Mail, Calendar, Globe, Twitter, Linkedin, Download, MessageSquare, Video, Eye, Sparkles } from 'lucide-react';
 import ChatInterface from './ChatInterface';
 
 const PaperDetail: React.FC<PaperDetailProps> = ({ paper, onClose }) => {
   const [showChat, setShowChat] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowOverlay(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleContactClick = () => {
     setShowChat(true);
@@ -50,8 +59,8 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ paper, onClose }) => {
             </div>
           </div>
 
-          <div className="space-y-6">
-            <div className="bg-gray-50 p-6 rounded-xl sticky top-6">
+          <div className="space-y-6 relative group">
+            <div className={`bg-gray-50 p-6 rounded-xl sticky top-6 transition-all duration-300 ${showOverlay ? 'filter blur-[2px]' : ''}`}>
               <div className="text-center mb-6">
                 <img
                   src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
@@ -73,18 +82,15 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ paper, onClose }) => {
                 </div>
                 <button
                   onClick={handleContactClick}
-                  className="flex items-center justify-center space-x-3 w-full p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-md hover:shadow-xl"
+                  className="flex items-center justify-center space-x-3 w-full p-3 bg-blue-600 text-white rounded-lg"
                 >
                   <Mail className="w-5 h-5" />
                   <span className="font-medium">Contact Researcher</span>
                 </button>
-                <button 
-                  onClick={() => {/* Add your scheduling logic here */}} 
-                  className="flex items-center justify-center space-x-3 w-full p-3 mt-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-md hover:shadow-xl group"
-                >
+                <button className="flex items-center justify-center space-x-3 w-full p-3 mt-3 bg-blue-600 text-white rounded-lg">
                   <div className="flex items-center space-x-2">
-                    <Calendar className="w-5 h-5 group-hover:animate-pulse" />
-                    <Video className="w-5 h-5 group-hover:animate-pulse" />
+                    <Calendar className="w-5 h-5" />
+                    <Video className="w-5 h-5" />
                   </div>
                   <span className="font-medium">Schedule Meeting</span>
                 </button>
@@ -102,11 +108,28 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ paper, onClose }) => {
               </div>
 
               <div className="mt-6 flex justify-center space-x-4">
-                <Twitter className="w-5 h-5 text-gray-600 hover:text-blue-400 cursor-pointer" />
-                <Linkedin className="w-5 h-5 text-gray-600 hover:text-blue-700 cursor-pointer" />
-                <Globe className="w-5 h-5 text-gray-600 hover:text-gray-900 cursor-pointer" />
+                <Twitter className="w-5 h-5 text-gray-600" />
+                <Linkedin className="w-5 h-5 text-gray-600" />
+                <Globe className="w-5 h-5 text-gray-600" />
               </div>
             </div>
+
+            <motion.div 
+              initial={{ opacity: 1 }}
+              animate={{ opacity: showOverlay ? 1 : 0 }}
+              transition={{ duration: 0.5 }}
+              className={`absolute inset-0 flex items-center justify-center bg-white/80 rounded-xl
+                transition-opacity duration-300
+                group-hover:opacity-0 pointer-events-none`}
+            >
+              <div className="text-center p-6">
+                <Sparkles className="w-12 h-12 text-blue-500 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Coming Soon!</h3>
+                <p className="text-gray-600">
+                  Hover to preview the researcher profile
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

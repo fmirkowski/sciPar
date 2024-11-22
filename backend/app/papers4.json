@@ -1,0 +1,116 @@
+{
+    "papers": [
+        {
+            "id": "2301.00170",
+            "title": "Democratization of Retail Trading: Can Reddit's WallStreetBets\n  Outperform Investment Bank Analysts?",
+            "author": "Tolga Buz",
+            "coauthors": "Gerard de Melo",
+            "abstract": "The recent hype around Reddit's WallStreetBets (WSB) community has inspired\nresearch on its impact on our economy and society. Still, one important\nquestion remains: Can WSB's community of anonymous contributors actually\nprovide valuable investment advice and possibly even outperform top financial\ninstitutions? We present a data-driven empirical study of investment\nrecommendations of WSB in comparison to recommendations made by leading\ninvestment banks, based on more than 1.6 million WSB posts published since\n2018. %enriched with stock market data. To this end, we extract and evaluate\ninvestment recommendations from WSB's raw text for all S&P 500 stocks and\ncompare their performance to more than 16,000 analyst recommendations from the\nlargest investment banks. While not all WSB recommendations prove profitable,\nour results show that they achieve average returns that compete with the best\nbanks and outperform them in certain cases. Furthermore, the WSB community has\nbeen better than almost all investment banks at detecting top-performing\nstocks. We conclude that WSB may indeed constitute a freely accessible,\nvaluable source of investment advice.",
+            "categories": "q-fin.ST, cs.CY, cs.SI"
+        },
+        {
+            "id": "2301.00248",
+            "title": "Nowcasting Stock Implied Volatility with Twitter",
+            "author": "Thomas Dierckx",
+            "coauthors": "Jesse Davis, Wim Schoutens",
+            "abstract": "In this study, we predict next-day movements of stock end-of-day implied\nvolatility using random forests. Through an ablation study, we examine the\nusefulness of different sources of predictors and expose the value of attention\nand sentiment features extracted from Twitter. We study the approach on a stock\nuniverse comprised of the 165 most liquid US stocks diversified across the 11\ntraditional market sectors using a sizeable out-of-sample period spanning over\nsix years. In doing so, we uncover that stocks in certain sectors, such as\nConsumer Discretionary, Technology, Real Estate, and Utilities are easier to\npredict than others. Further analysis shows that possible reasons for these\ndiscrepancies might be caused by either excess social media attention or low\noption liquidity. Lastly, we explore how our proposed approach fares throughout\ntime by identifying four underlying market regimes in implied volatility using\nhidden Markov models. We find that most added value is achieved in regimes\nassociated with lower implied volatility, but optimal regimes vary per market\nsector.",
+            "categories": "q-fin.CP"
+        },
+        {
+            "id": "2301.00372",
+            "title": "Lying Aversion and Vague Communication: An Experimental Study",
+            "author": "Keh-Kuan Sun",
+            "coauthors": "Stella Papadokonstantaki",
+            "abstract": "An agent may strategically employ a vague message to mislead an audience's\nbelief about the state of the world, but this may cause the agent to feel guilt\nor negatively impact how the audience perceives the agent. Using a novel\nexperimental design that allows participants to be vague while at the same time\nisolating the internal cost of lying from the social identity cost of appearing\ndishonest, we explore the extent to which these two types of lying costs affect\ncommunication. We find that participants exploit vagueness to be consistent\nwith the truth, while at the same time leveraging the imprecision to their own\nbenefit. More participants use vague messages in treatments where concern with\nsocial identity is relevant. In addition, we find that social identity concerns\nsubstantially affect the length and patterns of vague messages used across the\ntreatments.",
+            "categories": "econ.GN, q-fin.EC"
+        },
+        {
+            "id": "2301.00410",
+            "title": "Designing organizations for bottom-up task allocation: The role of\n  incentives",
+            "author": "Stephan Leitner",
+            "coauthors": "",
+            "abstract": "In recent years, various decentralized organizational forms have emerged,\nposing a challenge for organizational design. Some design elements, such as\ntask allocation, become emergent properties that cannot be fully controlled\nfrom the top down. The central question that arises in this context is: How can\nbottom-up task allocation be guided towards an effective organizational\nstructure? To address this question, this paper presents a novel agent-based\nmodel of an organization that features bottom-up task allocation that can be\nmotivated by either long-term or short-term orientation on the agents' side.\nThe model also includes an incentive mechanism to guide the bottom-up task\nallocation process and create incentives that range from altruistic to\nindividualistic. Our analysis shows that when bottom-up task allocation is\ndriven by short-term orientation and aligned with the incentive mechanisms, it\nleads to improved organizational performance that surpasses that of\ntraditionally designed organizations. Additionally, we find that the presence\nof altruistic incentive mechanisms within the organization reduces the\nimportance of mirroring in task allocation.",
+            "categories": "econ.GN, cs.MA, q-fin.EC, 68U20, 62P20, 90B70, I.6.3; I.6.5; J.4"
+        },
+        {
+            "id": "2301.00440",
+            "title": "Local Inequities in the Relative Production of and Exposure to Vehicular\n  Air Pollution in Los Angeles",
+            "author": "Geoff Boeing",
+            "coauthors": "Yougeng Lu, Clemens Pilgram",
+            "abstract": "Vehicular air pollution has created an ongoing air quality and public health\ncrisis. Despite growing knowledge of racial injustice in exposure levels, less\nis known about the relationship between the production of and exposure to such\npollution. This study assesses pollution burden by testing whether local\npopulations' vehicular air pollution exposure is proportional to how much they\ndrive. Through a Los Angeles, California case study we examine how this relates\nto race, ethnicity, and socioeconomic status -- and how these relationships\nvary across the region. We find that, all else equal, tracts whose residents\ndrive less are exposed to more air pollution, as are tracts with a less-White\npopulation. Commuters from majority-White tracts disproportionately drive\nthrough non-White tracts, compared to the inverse. Decades of\nracially-motivated freeway infrastructure planning and residential segregation\nshape today's disparities in who produces vehicular air pollution and who is\nexposed to it, but opportunities exist for urban planning and transport policy\nto mitigate this injustice.",
+            "categories": "stat.AP, cs.CY, econ.GN, physics.app-ph, q-fin.EC"
+        },
+        {
+            "id": "2301.00648",
+            "title": "Fast Barrier Option Pricing by the COS BEM Method in Heston Model",
+            "author": "A. Aimi",
+            "coauthors": "C. Guardasoni, L. Ortiz-Gracia, S. Sanfelici",
+            "abstract": "In this work, the Fourier-cosine series (COS) method has been combined with\nthe Boundary Element Method (BEM) for a fast evaluation of barrier option\nprices. After a description of its use in the Black and Scholes (BS) model, the\nfocus of the paper is on the application of the proposed methodology to the\nbarrier option evaluation in the Heston model, where its contribution is\nfundamental to improve computational efficiency and to make BEM appealing among\nFinance practitioners as a valid alternative to Monte Carlo (MC) or other more\ntraditional approaches. An error analysis is provided on the number of terms\nused in the Fourier-cosine series expansion, where the error bound estimation\nis based on the characteristic function of the log-asset price process.",
+            "categories": "q-fin.CP, q-fin.PR"
+        },
+        {
+            "id": "2301.00666",
+            "title": "E-commerce users' preferences for delivery options",
+            "author": "Yuki Oyama",
+            "coauthors": "Daisuke Fukuda, Naoto Imura, Katsuhiro Nishinari",
+            "abstract": "Many e-commerce marketplaces offer their users fast delivery options for free\nto meet the increasing needs of users, imposing an excessive burden on city\nlogistics. Therefore, understanding e-commerce users' preference for delivery\noptions is a key to designing logistics policies. To this end, this study\ndesigns a stated choice survey in which respondents are faced with choice tasks\namong different delivery options and time slots, which was completed by 4,062\nusers from the three major metropolitan areas in Japan. To analyze the data,\nmixed logit models capturing taste heterogeneity as well as flexible\nsubstitution patterns have been estimated. The model estimation results\nindicate that delivery attributes including fee, time, and time slot size are\nsignificant determinants of the delivery option choices. Associations between\nusers' preferences and socio-demographic characteristics, such as age, gender,\nteleworking frequency and the presence of a delivery box, were also suggested.\nMoreover, we analyzed two willingness-to-pay measures for delivery, namely, the\nvalue of delivery time savings (VODT) and the value of time slot shortening\n(VOTS), and applied a non-semiparametric approach to estimate their\ndistributions in a data-oriented manner. Although VODT has a large\nheterogeneity among respondents, the estimated median VODT is 25.6 JPY/day,\nimplying that more than half of the respondents would wait an additional day if\nthe delivery fee were increased by only 26 JPY, that is, they do not\nnecessarily need a fast delivery option but often request it when cheap or\nalmost free. Moreover, VOTS was found to be low, distributed with the median of\n5.0 JPY/hour; that is, users do not highly value the reduction in time slot\nsize in monetary terms. These findings on e-commerce users' preferences can\nhelp in designing levels of service for last-mile delivery to significantly\nimprove its efficiency.",
+            "categories": "econ.GN, cs.LG, q-fin.EC"
+        },
+        {
+            "id": "2301.00680",
+            "title": "Large-Scale 3D Printing -- Market Analysis",
+            "author": "Razan Abdelazim Idris Alzain",
+            "coauthors": "",
+            "abstract": "The aim of this research is to get a better understanding of the future of\nlarge-scale 3D printing. By developing the market analysis, it will be clear\nwhether large-scale 3D printing is becoming more of a preferred way of printing\ncustom-made parts for production companies. Companies can then choose whether\nto change their ways, for a more profitable less costly method, or stay on the\nroute they are on. By getting deep into this topic, a new world of technology\nis then being discovered and familiarized. With a mix of theoretical and\npractical relevance, a complete coverage could be made on large-scale 3D\nprinting. This paper could then cover all aspects of this topic, and the reader\ncould then make their own judgment if large-scale 3D printing would be the best\noption.",
+            "categories": "econ.GN, q-fin.EC"
+        },
+        {
+            "id": "2301.00681",
+            "title": "Historical Patterns and Recent Impacts of Chinese Investors in United\n  States Real Estate",
+            "author": "Kevin Sun",
+            "coauthors": "",
+            "abstract": "Since supplanting Canada in 2014, Chinese investors have been the lead\nforeign buyers of U.S. real estate, concentrating their purchases in urban\nareas with higher Chinese populations like California. The reasons for\ninvestment include prestige, freedom from capital confiscation, and safe,\ndiversified opportunities from abroad simply being more lucrative and available\nthan in their home country, where the market is eroding. Interestingly, since\n2019, Chinese investors have sold a net 23.6 billion dollars of U.S. commercial\nreal estate, a stark contrast to past acquisitions between 2013 to 2018 where\nthey were net buyers of almost 52 billion dollars worth of properties. A\nsimilar trend appears in the residential real estate segment too. In both 2017\nand 2018, Chinese buyers purchased over 40,000 U.S. residential properties\nwhich were halved in 2019 and steadily declined to only 6,700 in the past year.\nThis turnaround in Chinese investment can be attributed to a deteriorating\nrelationship between the U.S. and China during the Trump Presidency, financial\ndistress in China, and new Chinese government regulations prohibiting outbound\ninvestments. Additionally, while Chinese investment is a small share of U.S.\nreal estate (~1.5% at its peak), it has outsized impacts on market valuations\nof home prices in U.S. zip codes with higher populations of foreign-born\nChinese, increasing property prices and exacerbating the issue of housing\naffordability in these areas. This paper investigates the rapid growth and\ndecline of Chinese investment in U.S. real estate and its effect on U.S. home\nprices in certain demographics.",
+            "categories": "econ.GN, q-fin.EC"
+        },
+        {
+            "id": "2301.00790",
+            "title": "Online learning techniques for prediction of temporal tabular datasets\n  with regime changes",
+            "author": "Thomas Wong",
+            "coauthors": "Mauricio Barahona",
+            "abstract": "The application of deep learning to non-stationary temporal datasets can lead\nto overfitted models that underperform under regime changes. In this work, we\npropose a modular machine learning pipeline for ranking predictions on temporal\npanel datasets which is robust under regime changes. The modularity of the\npipeline allows the use of different models, including Gradient Boosting\nDecision Trees (GBDTs) and Neural Networks, with and without feature\nengineering. We evaluate our framework on financial data for stock portfolio\nprediction, and find that GBDT models with dropout display high performance,\nrobustness and generalisability with reduced complexity and computational cost.\nWe then demonstrate how online learning techniques, which require no retraining\nof models, can be used post-prediction to enhance the results. First, we show\nthat dynamic feature projection improves robustness by reducing drawdown in\nregime changes. Second, we demonstrate that dynamical model ensembling based on\nselection of models with good recent performance leads to improved Sharpe and\nCalmar ratios of out-of-sample predictions. We also evaluate the robustness of\nour pipeline across different data splits and random seeds with good\nreproducibility.",
+            "categories": "q-fin.CP, cs.CE, cs.LG"
+        },
+        {
+            "id": "2405.06808",
+            "title": "Large Language Model in Financial Regulatory Interpretation",
+            "author": "Zhiyu Cao",
+            "coauthors": "Zachary Feinstein",
+            "abstract": "This study explores the innovative use of Large Language Models (LLMs) as\nanalytical tools for interpreting complex financial regulations. The primary\nobjective is to design effective prompts that guide LLMs in distilling verbose\nand intricate regulatory texts, such as the Basel III capital requirement\nregulations, into a concise mathematical framework that can be subsequently\ntranslated into actionable code. This novel approach aims to streamline the\nimplementation of regulatory mandates within the financial reporting and risk\nmanagement systems of global banking institutions. A case study was conducted\nto assess the performance of various LLMs, demonstrating that GPT-4 outperforms\nother models in processing and collecting necessary information, as well as\nexecuting mathematical calculations. The case study utilized numerical\nsimulations with asset holdings -- including fixed income, equities, currency\npairs, and commodities -- to demonstrate how LLMs can effectively implement the\nBasel III capital adequacy requirements.\n  Keywords: Large Language Models, Prompt Engineering, LLMs in Finance, Basel\nIII, Minimum Capital Requirements, LLM Ethics",
+            "categories": "q-fin.RM, cs.AI, cs.CL"
+        },
+        {
+            "id": "2303.11414",
+            "title": "Cost of Implementation of Basel III reforms in Bangladesh -- A Panel\n  data analysis",
+            "author": "Dipti Rani Hazra",
+            "coauthors": "Md. Shah Naoaj, Mohammed Mahinur Alam, Abdul Kader",
+            "abstract": "Inspired by the recent debate on the macroeconomic implications of the new\nbank regulatory standards known as Basel III, we tried to find out in this\nstudy that the impact of Basel III liquidity and capital requirements in\nBangladesh proposed by Basel Committee on Banking Supervision (BCBS, 2010a). A\nsmall set of macro variables, using a sample of 22 private commercial banks\noperating in Bangladesh for the period of 2010-2014, are used to estimate\nlong-run relationships among the variables. The macroeconomic variables are\nincluded The profitability of banks, GDP, banks' lending to private sector, Net\nStable Funding Ratio, Tier 1 capital Ratio, Interest rate spread, real interest\nrate. The cost is quantified using Driscoll and Kraay panel data models with\nfixed effect. Impact of higher capital and liquidity requirement on Interest\nrate spread and lending to private sector of banks were considered as the cost\nto the economy as a whole whereas impact of higher capital and liquidity\nrequirement on profitability of banks(ROE) was considered as the cost of banks.\nHere it is found that, the interest rate level is positively affected by the\ntighter liquidity and capital requirements which driven toward lessen of the\nprivate sector lending of banks. The return on equity of banks varies\nnegatively with the liquidity and capital. The economic costs are considerably\nbelow the estimated positive benefit that the reform should have by reducing\nthe probability of banking crises and the associated banking losses (BCBS,\n2010b).",
+            "categories": "q-fin.RM"
+        },
+        {
+            "id": "2109.09043",
+            "title": "Composite Likelihood for Stochastic Migration Model with Unobserved\n  Factor",
+            "author": "Antoine Djogbenou",
+            "coauthors": "Christian Gouriéroux, Joann Jasiak, Maygol Bandehali",
+            "abstract": "We introduce the conditional Maximum Composite Likelihood (MCL) estimation\nmethod for the stochastic factor ordered Probit model of credit rating\ntransitions of firms. This model is recommended for internal credit risk\nassessment procedures in banks and financial institutions under the Basel III\nregulations. Its exact likelihood function involves a high-dimensional\nintegral, which can be approximated numerically before maximization. However,\nthe estimated migration risk and required capital tend to be sensitive to the\nquality of this approximation, potentially leading to statistical regulatory\narbitrage. The proposed conditional MCL estimator circumvents this problem and\nmaximizes the composite log-likelihood of the factor ordered Probit model. We\npresent three conditional MCL estimators of different complexity and examine\ntheir consistency and asymptotic normality when n and T tend to infinity. The\nperformance of these estimators at finite T is examined and compared with a\ngranularity-based approach in a simulation study. The use of the MCL estimator\nis also illustrated in an empirical application.",
+            "categories": "econ.EM"
+        },
+        {
+            "id": "1808.07339",
+            "title": "Scenario-based Risk Evaluation",
+            "author": "Ruodu Wang",
+            "coauthors": "Johanna F. Ziegel",
+            "abstract": "Risk measures such as Expected Shortfall (ES) and Value-at-Risk (VaR) have\nbeen prominent in banking regulation and financial risk management. Motivated\nby practical considerations in the assessment and management of risks,\nincluding tractability, scenario relevance and robustness, we consider\ntheoretical properties of scenario-based risk evaluation. We propose several\nnovel scenario-based risk measures, including various versions of Max-ES and\nMax-VaR, and study their properties. We establish axiomatic characterizations\nof scenario-based risk measures that are comonotonic-additive or coherent and\nan ES-based representation result is obtained. These results provide a\ntheoretical foundation for the recent Basel III & IV market risk calculation\nformulas. We illustrate the theory with financial data examples.",
+            "categories": "q-fin.MF, math.PR"
+        }
+    ]
+}

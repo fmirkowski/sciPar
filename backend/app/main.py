@@ -110,14 +110,14 @@ async def match_papers(request: QueryRequest):
             }}
         ]
 
-        Only include papers from the provided list that are somewhat relevant to the user query, always try to provide at least 4 papers, never provide nothing, always change the title and abstract to be more business friendly and literally so simple that a 15 year old could understand it. Write like you would be directly talking to the user. Do not create fictional papers."""
+        Only include papers from the provided list that are somewhat relevant to the user query, always try to provide at least 4 papers, never provide nothing, always change the title and abstract to be more business friendly and literally so simple and extremely relevant to the user query. Write like you would be directly talking to the user. Do not create fictional papers."""
 
         loop = asyncio.get_event_loop()
         response = await loop.run_in_executor(
             None,
             partial(
                 client.chat.completions.create,
-                model="gpt-3.5-turbo",
+                model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": "You are an API that returns only valid JSON arrays of paper information, using only papers from the provided list."},
                     {"role": "user", "content": prompt}

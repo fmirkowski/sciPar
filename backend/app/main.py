@@ -110,7 +110,7 @@ async def match_papers(request: QueryRequest):
             }}
         ]
 
-        Only include papers from the provided list that are somewhat relevant to the user query, always try to provide at least 4 papers, never provide nothing, always change the title and abstract to be more business friendly and literally so simple and extremely relevant to the user query. Write like you would be directly talking to the user. Do not create fictional papers."""
+        Only include papers from the provided list that are somewhat relevant to the user query, always try to provide at least 2papers, never provide nothing, always change the title and abstract to be more business friendly and literally so simple and extremely relevant to the user query, no technical jargon. Write like you would be directly talking to the user, helping him. Do not create fictional papers."""
 
         loop = asyncio.get_event_loop()
         response = await loop.run_in_executor(

@@ -17,12 +17,12 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onGetStarted }) => {
           className="space-y-6"
         >
           <h1 className="text-6xl font-bold text-gray-900 mb-4">
-            Connect with Leading<br />
-            <span className="text-blue-600">Academic Researchers</span>
+            Discover Research that<br />
+            <span className="text-blue-600">Drives Innovation</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Bridge the gap between academic research and business innovation through our 
-            comprehensive platform connecting industry leaders with academic experts.
+            Easily find and actually understand academic research that has the potential to transform your industry. 
+            Connect with the minds behind the innovations to get a head start.
           </p>
         </motion.div>
 
@@ -48,23 +48,23 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onGetStarted }) => {
           {[
             {
               icon: Brain,
-              title: 'Smart Paper Discovery',
-              description: 'Find relevant research papers using natural language search',
-              highlight: 'AI-Powered Search',
+              title: '1. Easy Publication Discovery',
+              description: <>Start by explaining your needs in <span className="font-medium">simple natural language</span> exactly as you would to a friend</>,
+              highlight: 'Available Now',
+              available: true
+            },   
+            {
+              icon: Rocket,
+              title: '2. Personalized Insights',
+              description: <>Get <span className="font-medium">relevant insights</span> on how research can help solve your specific needs - <span className="font-medium">no more technical jargon stopping you!</span></>,
+              highlight: 'Available Now',
               available: true
             },
             {
               icon: Globe,
-              title: 'Research Network',
-              description: 'Connect with researchers and experts in your field (Coming Soon)',
-              highlight: 'In Development',
-              available: false
-            },
-            {
-              icon: Rocket,
-              title: 'Paper Insights',
-              description: 'Get quick summaries and business applications of research papers',
-              highlight: 'Available Now',
+              title: '3. Contact to Implement',
+              description: <>Finally, <span className="font-medium">connect with the authors</span> to get expert guidance on implementing the solution and get a <span className="font-medium">head start</span> in your industry</>,
+              highlight: 'Coming Soon...',
               available: true
             }
           ].map((feature, index) => (

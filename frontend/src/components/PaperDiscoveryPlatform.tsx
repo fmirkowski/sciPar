@@ -7,7 +7,9 @@ import Onboarding from './Onboarding';
 import WelcomeScreen from './WelcomeScreen';
 import { ContactInfo, Paper } from '../types';
 
-const samplePapers: Paper[] = [
+// Currently not used, the main database is papers.json
+
+const samplePapers: Paper[] = [ 
   {
     id: "2307.00001",
     title: "Large Language Models in Business Applications",
@@ -220,6 +222,29 @@ const PaperDiscoveryPlatform: React.FC = () => {
     contactInfo: ContactInfo;
   }) => {
     setIsLoading(true);
+    
+    // Send data to Formspree
+    try {
+      await fetch('https://formspree.io/f/movqnqgb', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          role: data.role,
+          interests: data.interests,
+          organization: data.organization,
+          email: data.contactInfo.email,
+          timestamp: new Date().toISOString()
+        })
+      });
+    } catch (error) {
+      console.error('Failed to store user data:', error);
+      // Silent fail - don't interrupt user flow
+    }
+
+    // Continue with existing logic
     setPersonalPapers(data.papers);
     setPapers(data.papers);
     setShowOnboarding(false);

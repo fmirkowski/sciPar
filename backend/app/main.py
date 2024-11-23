@@ -102,7 +102,7 @@ async def match_papers(request: QueryRequest):
         Return ONLY a JSON array containing the most relevant papers (maximum 5) in this exact format:
         [
             {{
-                "title": "Very simplified version of the paper title from the list, no technical details",
+                "title": "Very simplified version of the paper title from the list, no technical details, adjust the title heavily in a way that it suits the user query",
                 "id": "Exact Arxiv paper ID from the list (e.g. 2307.00001)",
                 "main_author": "main author from the list",
                 "co_authors": ["co-author 1", "co-author 2"],

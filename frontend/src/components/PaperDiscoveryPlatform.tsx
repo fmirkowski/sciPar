@@ -151,6 +151,8 @@ const PaperDiscoveryPlatform: React.FC = () => {
   const [showWelcome, setShowWelcome] = useState(true);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState("Loading your personalized dashboard...");
+  const [loadingDuration, setLoadingDuration] = useState(0);
+  const [extendedLoadingMessage, setExtendedLoadingMessage] = useState('');
 
   useEffect(() => {
     setIsLoading(true);
@@ -178,6 +180,37 @@ const PaperDiscoveryPlatform: React.FC = () => {
       setIsLoading(false);
     }, 500);
   }, [searchQuery, activeTab, personalPapers]);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    
+    if (isLoading) {
+      interval = setInterval(() => {
+        setLoadingDuration(prev => prev + 1);
+      }, 1000);
+    } else {
+      setLoadingDuration(0);
+      setExtendedLoadingMessage('');
+    }
+
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+  }, [isLoading]);
+
+  useEffect(() => {
+    if (loadingDuration > 3) {
+      setExtendedLoadingMessage("Working hard to find the best papers for you...");
+    }
+    if (loadingDuration > 6) {
+      setExtendedLoadingMessage("Still searching through the research database...");
+    }
+    if (loadingDuration > 10) {
+      setExtendedLoadingMessage("This is taking longer than expected, but we're still looking!");
+    }
+  }, [loadingDuration]);
 
   const handleOnboardingComplete = async (data: {
     papers: Paper[];
@@ -252,6 +285,19 @@ const PaperDiscoveryPlatform: React.FC = () => {
           </button>
         </motion.div>
 
+        {/* Loading Message */}
+        {isLoading && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-4"
+          >
+            <div className="text-gray-600">
+              {extendedLoadingMessage || loadingMessage}
+            </div>
+          </motion.div>
+        )}
+
         {/* Navigation Tabs */}
         <NavigationTabs activeTab={activeTab} setActiveTab={setActiveTab} />
 
@@ -265,18 +311,22 @@ const PaperDiscoveryPlatform: React.FC = () => {
               <div key={i} className="animate-pulse bg-white rounded-xl h-64" />
             ))
           ) : (
-            papers.map((paper, index) => (
-              <motion.div
-                key={paper.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <PaperCard paper={paper} />
-              </motion.div>
-            ))
+            papers.map(paper => <PaperCard key={paper.id} paper={paper} />)
           )}
         </motion.div>
+
+        {/* Database Note */}
+        {!isLoading && papers.length > 0 && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center mt-8 p-4 bg-blue-50 rounded-lg"
+          >
+            <p className="text-sm text-blue-600">
+              Note: Our current database is limited. We're actively working on expanding our research paper collection to provide even more relevant results.
+            </p>
+          </motion.div>
+        )}
       </div>
       {isLoading && (
         <motion.div

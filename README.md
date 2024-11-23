@@ -1,17 +1,31 @@
-# Research Paper Discovery Platform
+# SciPar - Bridge Academic Research & Business Innovation
 
-# Start Here!
 [Visit SciPar](https://scipar.vercel.app)
 
-A platform designed to bridge the gap between academic research and business innovation. This application helps business professionals and industry experts discover relevant research papers and connect directly with researchers.
+## What is SciPar?
 
-## Features
+SciPar is a platform that makes academic research accessible and actionable for business professionals. We eliminate the barriers between groundbreaking research and practical business applications by translating complex academic papers into clear, business-focused insights.
 
-- 🔍 Natural language paper search
-- 👥 Direct researcher communication
-- 📊 Paper relevance scoring
-- 💼 Business-focused paper summaries
-- 🎯 Personalized recommendations
+## Why SciPar?
+
+- 🎯 **Save Time**: Stop spending hours searching through academic databases and decoding complex research papers
+- 💡 **Find Innovation**: Discover research-backed solutions that can give your business a competitive edge
+- 🤝 **Expert Access**: Connect directly with researchers to get implementation guidance
+- 📊 **Business Focus**: Get summaries and insights tailored for business applications
+- 🔍 **Smart Search**: Use natural language to find relevant papers - just like talking to a colleague
+
+## How It Works
+
+1. **Discover**: Explain your business challenge in plain English
+2. **Understand**: Get AI-powered summaries focused on practical applications
+3. **Connect**: Reach out to researchers for expert implementation guidance
+
+## Core Features
+
+- 🧠 Intuitive natural language paper search
+- 📝 Paper summaries adapted to your needs
+- 👥 Researcher communication platform
+- 💼 Industry-specific paper recommendations
 
 ## Tech Stack
 
@@ -19,13 +33,11 @@ A platform designed to bridge the gap between academic research and business inn
 - React with TypeScript
 - Tailwind CSS for styling
 - Framer Motion for animations
-- Axios for API calls
 
 ### Backend
 - FastAPI (Python)
 - SQLite for paper database
 - OpenAI integration
-- Sentence Transformers
 
 ## Setup Instructions
 
@@ -59,9 +71,9 @@ Change the API_BASE_URL in the frontend/src/services/paperApi.ts file to http://
 
 ## Contributing
 
-This project is currently in development. Feel free to submit issues and pull requests, I encourage it!
+We welcome contributions! Feel free to submit issues and pull requests, believe that together we may find the best solutions to make research more accessible and actionable.
 
-Drop a star if you like the project!
-## License
+**If you find this project useful, please consider giving it a star ⭐**
 
-MIT Licensee
+
+This repository is a cleaner version of the original one, developed on a hackathon, because it was pretty messy :)

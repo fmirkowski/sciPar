@@ -4,7 +4,7 @@
 
 ## What is SciPar?
 
-SciPar is a platform that makes academic research accessible and actionable for business professionals. We eliminate the barriers between groundbreaking research and practical business applications by translating complex academic papers into clear, business-focused insights.
+SciPar is a platform that makes academic research accessible and actionable for business professionals. We eliminate the barriers between groundbreaking research and practical business applications by translating complex academic papers into clear, business-focused insights so they can contact and implement solutions that can actually transform industries, get a head start and help bring researchers their solutions to life.
 
 ## Why SciPar?
 

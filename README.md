@@ -59,8 +59,9 @@ Change the API_BASE_URL in the frontend/src/services/paperApi.ts file to http://
 
 ## Contributing
 
-This project is currently in development. Feel free to submit issues and pull requests.
+This project is currently in development. Feel free to submit issues and pull requests, I encourage it!
 
+Drop a star if you like the project!
 ## License
 
 MIT Licensee

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@tailwindcss/typography": "^0.5.15",
+    "@vercel/analytics": "^1.4.1",
     "axios": "^1.7.7",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.460.0",
